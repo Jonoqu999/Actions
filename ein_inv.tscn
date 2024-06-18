@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://bo3t2oqyknyf"]
+
+[ext_resource type="Texture2D" uid="uid://htjjbbs8sx57" path="res://Textures/Pixaxe.png" id="1_h5spn"]
+[ext_resource type="Script" path="res://ein_inv.gd" id="1_qgtnn"]
+[ext_resource type="Texture2D" uid="uid://c1rhffggn1iwy" path="res://Textures/Axe1.png" id="3_jrqxo"]
+[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="4_ll78r"]
+
+[node name="EinInv" type="Node"]
+script = ExtResource("1_qgtnn")
+
+[node name="Pic" type="CanvasGroup" parent="."]
+
+[node name="Pixaxe" type="Sprite2D" parent="Pic"]
+texture_filter = 1
+position = Vector2(166.25, 277.5)
+scale = Vector2(5.01562, 4.84375)
+texture = ExtResource("1_h5spn")
+
+[node name="lvl" type="Label" parent="Pic"]
+offset_left = 109.25
+offset_top = 392.5
+offset_right = 223.25
+offset_bottom = 437.5
+theme_override_font_sizes/font_size = 30
+text = "Pic lvl: 1"
+
+[node name="Axe" type="CanvasGroup" parent="."]
+position = Vector2(299, 0)
+
+[node name="Axe" type="Sprite2D" parent="Axe"]
+texture_filter = 1
+position = Vector2(166.25, 277.5)
+scale = Vector2(5.01562, 4.84375)
+texture = ExtResource("3_jrqxo")
+
+[node name="lvl" type="Label" parent="Axe"]
+offset_left = 109.25
+offset_top = 392.5
+offset_right = 223.25
+offset_bottom = 437.5
+theme_override_font_sizes/font_size = 30
+text = "Pic lvl: 1"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 27.0
+offset_right = 183.0
+offset_bottom = 118.0
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[node name="Accoins" type="CanvasGroup" parent="."]
+
+[node name="Coins" type="Sprite2D" parent="Accoins"]
+texture_filter = 1
+position = Vector2(1087, 52)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("4_ll78r")
+
+[node name="Accoins" type="Label" parent="Accoins"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 915.0
+offset_top = 27.0
+offset_right = 1033.0
+offset_bottom = 72.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "99999999999999999999999999999"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

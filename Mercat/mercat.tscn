@@ -1,0 +1,129 @@
+[gd_scene load_steps=3 format=3 uid="uid://cblqtptnb1l8k"]
+
+[ext_resource type="Script" path="res://Mercat/Mercat.gd" id="1_key6u"]
+[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_4um4g"]
+
+[node name="Mercat" type="Node"]
+script = ExtResource("1_key6u")
+
+[node name="Mat" type="Button" parent="."]
+offset_left = 99.0
+offset_top = 264.0
+offset_right = 287.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 30
+text = "Materials"
+
+[node name="Ein" type="Button" parent="."]
+offset_left = 487.0
+offset_top = 269.0
+offset_right = 675.0
+offset_bottom = 335.0
+theme_override_font_sizes/font_size = 30
+text = "Einies"
+
+[node name="En" type="Button" parent="."]
+offset_left = 875.0
+offset_top = 274.0
+offset_right = 1091.0
+offset_bottom = 340.0
+theme_override_font_sizes/font_size = 30
+text = "Encantaments"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 892.0
+offset_top = 227.0
+offset_right = 1066.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 30
+text = "EN TREBALL"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 27.0
+offset_right = 192.0
+offset_bottom = 118.0
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[node name="Accoins" type="CanvasGroup" parent="."]
+
+[node name="Coins" type="Sprite2D" parent="Accoins"]
+texture_filter = 1
+position = Vector2(1087, 52)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_4um4g")
+
+[node name="Accoins" type="Label" parent="Accoins"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 915.0
+offset_top = 27.0
+offset_right = 1033.0
+offset_bottom = 72.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RepMat" type="CanvasGroup" parent="."]
+
+[node name="RMat" type="Button" parent="RepMat"]
+offset_left = 111.0
+offset_top = 353.0
+offset_right = 272.0
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 30
+text = "Recontruir"
+
+[node name="PMat" type="ItemList" parent="RepMat"]
+offset_left = 104.0
+offset_top = 416.0
+offset_right = 281.0
+offset_bottom = 507.0
+item_count = 3
+item_0/text = "- 15 Pedres"
+item_0/selectable = false
+item_0/disabled = true
+item_1/text = "- 5 Ferros"
+item_1/selectable = false
+item_1/disabled = true
+item_2/text = "- 3 Or"
+item_2/selectable = false
+item_2/disabled = true
+
+[node name="RepEin" type="CanvasGroup" parent="."]
+position = Vector2(391, 0)
+
+[node name="REin" type="Button" parent="RepEin"]
+offset_left = 111.0
+offset_top = 353.0
+offset_right = 272.0
+offset_bottom = 403.0
+theme_override_font_sizes/font_size = 30
+text = "Recontruir"
+
+[node name="PEin" type="ItemList" parent="RepEin"]
+offset_left = 104.0
+offset_top = 416.0
+offset_right = 281.0
+offset_bottom = 507.0
+item_count = 3
+item_0/text = "- 50 Pedres"
+item_0/selectable = false
+item_0/disabled = true
+item_1/text = "- 15 Ferros"
+item_1/selectable = false
+item_1/disabled = true
+item_2/text = "- 10 Or"
+item_2/selectable = false
+item_2/disabled = true
+
+[connection signal="pressed" from="Mat" to="." method="_on_mat_pressed"]
+[connection signal="pressed" from="Ein" to="." method="_on_ein_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="RepMat/RMat" to="." method="_on_r_mat_pressed"]
+[connection signal="pressed" from="RepEin/REin" to="." method="_on_r_ein_pressed"]

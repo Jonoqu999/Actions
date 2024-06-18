@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgmgxmcei4el1"]
+
+[ext_resource type="Script" path="res://Bosc.gd" id="1_g2c1k"]
+
+[node name="Bosc" type="Node"]
+script = ExtResource("1_g2c1k")
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 27.0
+offset_right = 183.0
+offset_bottom = 118.0
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[node name="Talar" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.5
+offset_top = -45.5
+offset_right = 93.5
+offset_bottom = 45.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 60
+text = "Talar"
+
+[node name="Obt" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -126.0
+offset_right = 105.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Has obtingut x fusta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ObTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Talar" to="." method="_on_talar_pressed"]
+[connection signal="timeout" from="ObTimer" to="." method="_on_ob_timer_timeout"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

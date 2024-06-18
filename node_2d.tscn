@@ -1,0 +1,140 @@
+[gd_scene load_steps=13 format=3 uid="uid://bkfj70oe3up3m"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_hx1fd"]
+[ext_resource type="Texture2D" uid="uid://dk6py6mgps8dv" path="res://Textures/Main-Background.png" id="2_1l66w"]
+[ext_resource type="Texture2D" uid="uid://ctjhqgskk7f2q" path="res://Textures/Main-Bosc-Hover.png" id="4_q7r1a"]
+[ext_resource type="PackedScene" uid="uid://dxihj0qcawu0r" path="res://copnfig.tscn" id="5_6iiyh"]
+[ext_resource type="Texture2D" uid="uid://cq7y6088mk0wq" path="res://Textures/Main-Bosc.png" id="5_go78v"]
+[ext_resource type="Texture2D" uid="uid://cuk6mmo3duq70" path="res://Textures/Main-Mina-hover.png" id="5_gvry1"]
+[ext_resource type="Texture2D" uid="uid://do8tkdmrlewme" path="res://Textures/Main-Bosc-Dis.png" id="6_ig3pi"]
+[ext_resource type="Texture2D" uid="uid://cb71vjpjbdeti" path="res://Textures/pixil-layer-Mina.png" id="7_fttsu"]
+[ext_resource type="Texture2D" uid="uid://dyh4wps538dyq" path="res://Textures/Main-Poble-Hover.png" id="9_c8vb2"]
+[ext_resource type="Texture2D" uid="uid://3psin4x2hdvo" path="res://Textures/Main-Poble.png" id="10_nbbce"]
+[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="11_w47fh"]
+[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="12_5k61h"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_hx1fd")
+
+[node name="Bc" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1l66w")
+stretch_mode = 4
+
+[node name="Inv" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 18.0
+offset_top = 16.0
+offset_right = 106.0
+offset_bottom = 104.0
+texture_normal = ExtResource("11_w47fh")
+texture_hover = ExtResource("12_5k61h")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ConfigButton" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -395.0
+offset_top = 34.0
+offset_right = -19.0
+offset_bottom = 125.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 60
+text = "Configuració"
+
+[node name="Poble_Hover" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 708.0
+offset_top = 254.0
+offset_right = 1306.0
+offset_bottom = 810.0
+texture = ExtResource("9_c8vb2")
+
+[node name="Mine_Hover" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 199.0
+offset_top = 5.0
+offset_right = 938.0
+offset_bottom = 569.0
+texture = ExtResource("5_gvry1")
+stretch_mode = 5
+
+[node name="Bosc_Hover" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+offset_left = -276.0
+offset_top = 90.0
+offset_right = 582.0
+offset_bottom = 939.0
+texture = ExtResource("4_q7r1a")
+
+[node name="Copnfig" parent="." instance=ExtResource("5_6iiyh")]
+mode = 2
+initial_position = 0
+position = Vector2i(250, 70)
+visible = false
+unresizable = false
+
+[node name="Poble" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 918.0
+offset_top = 464.0
+offset_right = 1102.0
+offset_bottom = 607.0
+texture_normal = ExtResource("10_nbbce")
+stretch_mode = 0
+
+[node name="Bosc" type="TextureButton" parent="."]
+texture_filter = 1
+offset_top = 397.0
+offset_right = 242.0
+offset_bottom = 639.0
+scale = Vector2(1.00671, 1.00707)
+texture_normal = ExtResource("5_go78v")
+texture_disabled = ExtResource("6_ig3pi")
+stretch_mode = 0
+
+[node name="Mine" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 482.0
+offset_top = 220.0
+offset_right = 664.0
+offset_bottom = 359.0
+texture_normal = ExtResource("7_fttsu")
+stretch_mode = 4
+
+[node name="RBosc" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -180.0
+offset_right = 234.0
+offset_bottom = -93.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Necessites una destral"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Inv" to="." method="_on_inventari_pressed"]
+[connection signal="pressed" from="ConfigButton" to="." method="_on_config_button_pressed"]
+[connection signal="mouse_entered" from="Poble" to="." method="_on_poble_mouse_entered"]
+[connection signal="mouse_exited" from="Poble" to="." method="_on_poble_mouse_exited"]
+[connection signal="pressed" from="Poble" to="." method="_on_tenda_button_pressed"]
+[connection signal="mouse_entered" from="Bosc" to="." method="_on_bosc_mouse_entered"]
+[connection signal="mouse_exited" from="Bosc" to="." method="_on_bosc_mouse_exited"]
+[connection signal="pressed" from="Bosc" to="." method="_on_bosc_pressed"]
+[connection signal="mouse_entered" from="Mine" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="Mine" to="." method="_on_texture_button_mouse_exited"]
+[connection signal="pressed" from="Mine" to="." method="_on_mina_pressed"]

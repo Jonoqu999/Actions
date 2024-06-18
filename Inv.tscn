@@ -1,0 +1,143 @@
+[gd_scene load_steps=3 format=3 uid="uid://c45i550berpjc"]
+
+[ext_resource type="Script" path="res://Inv.gd" id="1_a1bar"]
+[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_teoun"]
+
+[node name="Inventari" type="Node"]
+script = ExtResource("1_a1bar")
+
+[node name="fusta" type="Label" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 76.0
+offset_top = 42.5
+offset_right = 155.0
+offset_bottom = 84.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Fusta"
+
+[node name="pedra" type="Label" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 66.0
+offset_top = -116.5
+offset_right = 150.0
+offset_bottom = -71.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Pedra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ferro" type="Label" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 273.0
+offset_top = -116.5
+offset_right = 350.0
+offset_bottom = -71.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Ferro"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="or" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.5
+offset_top = -116.5
+offset_right = -75.5
+offset_bottom = -71.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Or"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="maragda" type="Label" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -116.5
+offset_right = -369.0
+offset_bottom = -71.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Maragdes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="diamant" type="Label" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -107.0
+offset_right = -126.0
+offset_bottom = -81.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Diamants"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 27.0
+offset_right = 192.0
+offset_bottom = 118.0
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[node name="Ein" type="Button" parent="."]
+offset_left = 233.0
+offset_top = 28.0
+offset_right = 393.0
+offset_bottom = 119.0
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Eines"
+
+[node name="Accoins" type="CanvasGroup" parent="."]
+
+[node name="Coins" type="Sprite2D" parent="Accoins"]
+texture_filter = 1
+position = Vector2(1087, 52)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_teoun")
+
+[node name="Accoins" type="Label" parent="Accoins"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 915.0
+offset_top = 27.0
+offset_right = 1033.0
+offset_bottom = 72.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "99999999999999999999999999999"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Ein" to="." method="_on_eines_pressed"]

@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxihj0qcawu0r"]
+
+[ext_resource type="Script" path="res://copnfig.gd" id="1_u5tf5"]
+
+[node name="Copnfig" type="Popup"]
+title = "Config"
+initial_position = 1
+size = Vector2i(700, 500)
+visible = true
+script = ExtResource("1_u5tf5")
+metadata/_edit_horizontal_guides_ = []
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(600, 600)
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Compte" type="TabBar" parent="TabContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Compte"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Compte/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+columns = 2
+
+[node name="UserT" type="Label" parent="TabContainer/Compte/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Usuari"
+
+[node name="User" type="TextEdit" parent="TabContainer/Compte/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+placeholder_text = "Nom d'usuari"
+
+[node name="PassT" type="Label" parent="TabContainer/Compte/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Contrasenya"
+
+[node name="Pass" type="TextEdit" parent="TabContainer/Compte/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 40)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+placeholder_text = "Contrasenya"
+
+[node name="Save" type="Button" parent="TabContainer/Compte/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "Guardar"
+
+[node name="Load" type="Button" parent="TabContainer/Compte/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "Carregar"
+
+[node name="Alert" type="Label" parent="TabContainer/Compte/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="TabContainer/Compte/MarginContainer/GridContainer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="TabContainer/Compte/MarginContainer/GridContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,324 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0nbkvfojrafh"]
+
+[ext_resource type="Script" path="res://Mercat/Materials.gd" id="1_g4gkx"]
+[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_mys38"]
+
+[node name="TendaMinerals" type="Node"]
+script = ExtResource("1_g4gkx")
+
+[node name="Pedra" type="CanvasGroup" parent="."]
+
+[node name="SPedra" type="HSlider" parent="Pedra"]
+offset_left = 130.0
+offset_top = 287.0
+offset_right = 247.0
+offset_bottom = 303.0
+
+[node name="TPedra" type="Label" parent="Pedra"]
+offset_left = 143.0
+offset_top = 194.0
+offset_right = 227.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 30
+text = "Pedra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pquan" type="Label" parent="Pedra"]
+offset_left = 166.0
+offset_top = 239.0
+offset_right = 206.0
+offset_bottom = 284.0
+rotation = 0.00406488
+theme_override_font_sizes/font_size = 30
+text = "99999"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PVenta" type="Button" parent="Pedra"]
+offset_left = 130.0
+offset_top = 320.0
+offset_right = 242.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Vendre"
+
+[node name="Fusta" type="CanvasGroup" parent="."]
+position = Vector2(0, 214)
+
+[node name="SFusta" type="HSlider" parent="Fusta"]
+offset_left = 130.0
+offset_top = 287.0
+offset_right = 247.0
+offset_bottom = 303.0
+
+[node name="TFusta" type="Label" parent="Fusta"]
+offset_left = 143.0
+offset_top = 194.0
+offset_right = 227.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 30
+text = "Fusta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fquan" type="Label" parent="Fusta"]
+offset_left = 166.0
+offset_top = 239.0
+offset_right = 206.0
+offset_bottom = 284.0
+rotation = 0.00406488
+theme_override_font_sizes/font_size = 30
+text = "99999"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="FVenta" type="Button" parent="Fusta"]
+offset_left = 130.0
+offset_top = 320.0
+offset_right = 242.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Vendre"
+
+[node name="Ferro" type="CanvasGroup" parent="."]
+position = Vector2(197, 0)
+
+[node name="SFerro" type="HSlider" parent="Ferro"]
+offset_left = 130.0
+offset_top = 287.0
+offset_right = 247.0
+offset_bottom = 303.0
+
+[node name="TFerro" type="Label" parent="Ferro"]
+offset_left = 143.0
+offset_top = 194.0
+offset_right = 227.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 30
+text = "Ferro"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fquan" type="Label" parent="Ferro"]
+offset_left = 166.0
+offset_top = 239.0
+offset_right = 206.0
+offset_bottom = 284.0
+rotation = 0.00406488
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="FVenta" type="Button" parent="Ferro"]
+offset_left = 130.0
+offset_top = 320.0
+offset_right = 242.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Vendre"
+
+[node name="Or" type="CanvasGroup" parent="."]
+position = Vector2(395, -1)
+
+[node name="SOr" type="HSlider" parent="Or"]
+offset_left = 130.0
+offset_top = 287.0
+offset_right = 247.0
+offset_bottom = 303.0
+
+[node name="TOr" type="Label" parent="Or"]
+offset_left = 143.0
+offset_top = 194.0
+offset_right = 227.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 30
+text = "Or"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Oquan" type="Label" parent="Or"]
+offset_left = 166.0
+offset_top = 239.0
+offset_right = 206.0
+offset_bottom = 284.0
+rotation = 0.00406488
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="OVenta" type="Button" parent="Or"]
+offset_left = 131.0
+offset_top = 320.0
+offset_right = 243.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Vendre"
+
+[node name="Maragda" type="CanvasGroup" parent="."]
+position = Vector2(580, -1)
+
+[node name="SMaragda" type="HSlider" parent="Maragda"]
+offset_left = 130.0
+offset_top = 287.0
+offset_right = 247.0
+offset_bottom = 303.0
+
+[node name="TMaragda" type="Label" parent="Maragda"]
+offset_left = 122.0
+offset_top = 194.0
+offset_right = 250.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 30
+text = "Maragda
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mquan" type="Label" parent="Maragda"]
+offset_left = 166.0
+offset_top = 239.0
+offset_right = 206.0
+offset_bottom = 284.0
+rotation = 0.00406488
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MVenta" type="Button" parent="Maragda"]
+offset_left = 131.0
+offset_top = 320.0
+offset_right = 243.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Vendre"
+icon_alignment = 1
+text_direction = 3
+
+[node name="Diamant" type="CanvasGroup" parent="."]
+position = Vector2(773, -1)
+
+[node name="SDiamant" type="HSlider" parent="Diamant"]
+offset_left = 130.0
+offset_top = 287.0
+offset_right = 247.0
+offset_bottom = 303.0
+
+[node name="TDiamant" type="Label" parent="Diamant"]
+offset_left = 122.0
+offset_top = 194.0
+offset_right = 250.0
+offset_bottom = 239.0
+theme_override_font_sizes/font_size = 30
+text = "Diamant
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dquan" type="Label" parent="Diamant"]
+offset_left = 166.0
+offset_top = 239.0
+offset_right = 206.0
+offset_bottom = 284.0
+rotation = 0.00406488
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DVenta" type="Button" parent="Diamant"]
+offset_left = 131.0
+offset_top = 320.0
+offset_right = 243.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 30
+text = "Vendre"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Venta" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -194.5
+offset_bottom = -171.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 28.0
+offset_top = 27.0
+offset_right = 183.0
+offset_bottom = 118.0
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[node name="Accoins" type="CanvasGroup" parent="."]
+position = Vector2(1152, 0)
+
+[node name="Coins" type="Sprite2D" parent="Accoins"]
+texture_filter = 1
+position = Vector2(-67, 68)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("2_mys38")
+
+[node name="Accoins" type="Label" parent="Accoins"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -239.0
+offset_top = 43.0
+offset_right = -121.0
+offset_bottom = 88.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="CheckBox" type="CheckBox" parent="CanvasGroup"]
+offset_left = 1075.0
+offset_top = 132.0
+offset_right = 1099.0
+offset_bottom = 156.0
+theme_override_font_sizes/font_size = 1
+
+[node name="Comp" type="Label" parent="CanvasGroup"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 939.0
+offset_top = 121.0
+offset_right = 1057.0
+offset_bottom = 166.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Comprar"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[connection signal="pressed" from="Pedra/PVenta" to="." method="_on_p_venta_pressed"]
+[connection signal="pressed" from="Fusta/FVenta" to="." method="_on_fu_venta_pressed"]
+[connection signal="pressed" from="Ferro/FVenta" to="." method="_on_f_venta_pressed"]
+[connection signal="pressed" from="Or/OVenta" to="." method="_on_o_venta_pressed"]
+[connection signal="pressed" from="Maragda/MVenta" to="." method="_on_m_venta_pressed"]
+[connection signal="pressed" from="Diamant/DVenta" to="." method="_on_d_venta_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="toggled" from="CanvasGroup/CheckBox" to="." method="_on_check_box_toggled"]
