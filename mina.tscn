@@ -5,16 +5,6 @@
 [node name="Mina" type="Node"]
 script = ExtResource("1_csvut")
 
-[node name="NouMin" type="Label" parent="."]
-anchors_preset = 10
-anchor_right = 1.0
-offset_top = 123.0
-offset_bottom = 171.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 30
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Mineral" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -28,14 +18,6 @@ offset_bottom = -99.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
-
-[node name="Cooldown" type="Timer" parent="."]
-wait_time = 0.5
-
-[node name="NTimer" type="Timer" parent="."]
 
 [node name="Exit" type="Button" parent="."]
 offset_left = 37.0
@@ -138,9 +120,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
-[connection signal="timeout" from="NTimer" to="." method="_on_n_timer_timeout"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="T1" to="." method="_on_t_1_pressed"]
 [connection signal="pressed" from="T2" to="." method="_on_t_2_pressed"]

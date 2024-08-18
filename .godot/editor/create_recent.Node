@@ -1,6 +1,8 @@
-TextureProgressBar
+Label
 Timer
 ProgressBar
+TextureRect
+TextureProgressBar
 TextureButton
 AnimatedSprite2D
 Sprite2D
