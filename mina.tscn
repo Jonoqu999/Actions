@@ -48,15 +48,15 @@ theme_override_font_sizes/font_size = 60
 text = "Exit"
 
 [node name="T1" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -367.0
-offset_top = -45.0
-offset_right = -184.0
-offset_bottom = 46.0
+anchors_preset = -1
+anchor_left = 0.261
+anchor_top = 0.501
+anchor_right = 0.261
+anchor_bottom = 0.501
+offset_left = -91.672
+offset_top = -45.648
+offset_right = 91.328
+offset_bottom = 45.352
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
@@ -78,14 +78,14 @@ theme_override_font_sizes/font_size = 60
 text = "Tier 2"
 
 [node name="T3" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.746
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.746
 anchor_bottom = 0.5
-offset_left = 175.5
+offset_left = -107.892
 offset_top = -45.5
-offset_right = 390.5
+offset_right = 107.108
 offset_bottom = 45.5
 grow_horizontal = 2
 grow_vertical = 2

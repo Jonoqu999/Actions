@@ -1,38 +1,52 @@
 extends Node
-var ob_t1 = [{ore = "pedra",Pro = 80},{ore = "ferro",Pro = 14},{ore = "or",Pro = 7}]
-var ob_t2 = [{ore = "pedra",Pro = 70},{ore = "ferro",Pro = 15},{ore = "or",Pro = 10},{ore = "maragda",Pro = 6}]
-var ob_t3 = [{ore = "pedra",Pro = 60},{ore = "ferro",Pro = 20},{ore = "or",Pro = 14},{ore = "maragda",Pro = 3},{ore = "diamant",Pro = 3}]
+var ob_t1 = GlobalVariables.loot_tabel
+var MAX_ROCK_HEALTH = GlobalVariables.rock_health
+var HEALH_FASE = MAX_ROCK_HEALTH/4.0
+var rock_health = MAX_ROCK_HEALTH
 var mina = true
+var mining = false
+
+@onready var rock = $AnimatedSprite2D 
+@onready var bar = $ProgressBar
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Rec2.hide()
-	$Rec3.hide()
-	$T2.disabled = false
-	$T3.disabled = true
-	if GlobalVariables.pic_lvl >= 2:
-		$T2.disabled = false
-	if GlobalVariables.pic_lvl >= 3:
-		$T3.disabled = false
-	if $T2.disabled:
-		$Rec2.show()
-	if $T3.disabled:
-		$Rec3.show()
-	$Timer.stop()
-	$NTimer.stop()
-	$Cooldown.stop()
+	$ProgressBar.max_value = MAX_ROCK_HEALTH
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
+func _process(_delta):	
+	# Heals the rock if it is not 
+	if rock_health > 0 and mining:
+		rock_health += 1*_delta
+		rock_health = min(rock_health,MAX_ROCK_HEALTH)
+		
+		_update()
 
+
+func _on_texture_button_pressed():
+	$LTimer.stop()
+	mining = true
+	rock_health -= 1 #Loses 1 helth per hit
+	rock_health = max(0,rock_health)
+	
+	if rock_health == 0 and mina:
+		mining = false
+		$Cooldown.start()
+		$LTimer.start()
+		_on_minar_pressed(ob_t1)
+	
+	_update()
+
+func _update(): #Updates the rock and bar satatus
+	rock.set_frame_and_progress(abs(ceil(rock_health/float(HEALH_FASE))-4),0.1) #Some fancy math to know the frame
+	
+	bar.value = rock_health
 
 func _on_minar_pressed(obtenibles):
 	var nombre
 	if mina:
 		mina = false
-		$Cooldown.start()
 		var ran_min = randi_range(0,100)
 		for i in obtenibles:
 			if ran_min <= i.Pro:
@@ -99,40 +113,24 @@ func _on_minar_pressed(obtenibles):
 		$Mineral.text = "T'has d'esperar"
 		$Timer.start()
 
-func _on_main_hide():
-	$Minar.hide()
-	$Mineral.hide()
-	$NouMin.hide()
-	$Timer.stop()
-	$NTimer.stop()
+func _on_exit_pressed():
+	get_tree().change_scene_to_file("res://mina.tscn")
+
+
+func _on_cooldown_timeout():
+	mina = true
+	rock_health = MAX_ROCK_HEALTH
+	
 	$Cooldown.stop()
 
 func _on_timer_timeout():
 	$Mineral.hide()
 
-
-func _on_cooldown_timeout():
-	mina = true
-
-
 func _on_n_timer_timeout():
 	$NouMin.hide()
 
 
-func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://node_2d.tscn")
-
-
-func _on_t_1_pressed():
-	GlobalVariables.loot_tabel = ob_t1
-	GlobalVariables.rock_health = 10
-	
-	get_tree().change_scene_to_file("res://minant.tscn")
-
-
-func _on_t_2_pressed():
-	_on_minar_pressed(ob_t2)
-
-
-func _on_t_3_pressed():
-	_on_minar_pressed(ob_t3)
+func _on_l_timer_timeout():
+	_update()
+	$LTimer.stop()
+	mining = true

@@ -15,3 +15,6 @@ var poble = {mat=false, ein=false, en=false}
 
 var user = ""
 var passw = ""
+
+var rock_health = 10
+var loot_tabel = []

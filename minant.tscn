@@ -1,0 +1,138 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1rek1s67swto"]
+
+[ext_resource type="Script" path="res://minant.gd" id="1_h82uf"]
+[ext_resource type="Texture2D" uid="uid://dk6py6mgps8dv" path="res://Textures/Main-Background.png" id="2_4khw6"]
+[ext_resource type="Texture2D" uid="uid://c8vcokufrwnwc" path="res://Textures/Roca_1_1.png" id="3_k86ix"]
+[ext_resource type="Texture2D" uid="uid://dcw0fkd8sn23u" path="res://Textures/Roca_1_2.png" id="5_8mdlb"]
+[ext_resource type="Texture2D" uid="uid://rpo5ovi0kgu1" path="res://Textures/Roca_1_3.png" id="6_q0kj8"]
+[ext_resource type="Texture2D" uid="uid://64hhbvtnsmjo" path="res://Textures/Roca_1_4.png" id="7_yb7c5"]
+[ext_resource type="Texture2D" uid="uid://d2eivbg16gwub" path="res://Textures/Roca_1_5.png" id="8_p3q2d"]
+[ext_resource type="Texture2D" uid="uid://b7kjhscndbdbs" path="res://Textures/Roca_vida_bc.png" id="8_twko7"]
+[ext_resource type="Texture2D" uid="uid://bilprslgc3x5y" path="res://Textures/Roca_vida.png" id="9_v1hfu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nq6hh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_k86ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8mdlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q0kj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yb7c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p3q2d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_h82uf")
+
+[node name="Bc" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4khw6")
+stretch_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(571, 308)
+scale = Vector2(11, 11)
+sprite_frames = SubResource("SpriteFrames_nq6hh")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.486
+anchor_top = 0.464
+anchor_right = 0.486
+anchor_bottom = 0.464
+offset_left = -112.872
+offset_top = -138.672
+offset_right = 112.128
+offset_bottom = 138.328
+
+[node name="Exit" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.099
+anchor_top = 0.112
+anchor_right = 0.099
+anchor_bottom = 0.112
+offset_left = -77.048
+offset_top = -45.576
+offset_right = 77.952
+offset_bottom = 45.424
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[node name="NouMin" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 574.0
+offset_bottom = 622.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mineral" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = 154.0
+offset_right = 18.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="NTimer" type="Timer" parent="."]
+
+[node name="LTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = -1
+anchor_left = 0.489
+anchor_top = 0.148
+anchor_right = 0.489
+anchor_bottom = 0.148
+offset_left = -160.328
+offset_top = -15.904
+offset_right = 159.672
+offset_bottom = 16.096
+step = 0.01
+value = 100.0
+texture_under = ExtResource("8_twko7")
+texture_progress = ExtResource("9_v1hfu")
+radial_initial_angle = 134.5
+radial_fill_degrees = 0.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="NTimer" to="." method="_on_n_timer_timeout"]
+[connection signal="timeout" from="LTimer" to="." method="_on_l_timer_timeout"]

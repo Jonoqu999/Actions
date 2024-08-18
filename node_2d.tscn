@@ -28,23 +28,30 @@ stretch_mode = 4
 
 [node name="Inv" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 18.0
-offset_top = 16.0
-offset_right = 106.0
-offset_bottom = 104.0
+anchors_preset = -1
+anchor_left = 0.054
+anchor_top = 0.093
+anchor_right = 0.054
+anchor_bottom = 0.093
+offset_left = -44.208
+offset_top = -44.264
+offset_right = 43.792
+offset_bottom = 43.736
 texture_normal = ExtResource("11_w47fh")
 texture_hover = ExtResource("12_5k61h")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ConfigButton" type="Button" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -395.0
-offset_top = 34.0
-offset_right = -19.0
-offset_bottom = 125.0
+anchors_preset = -1
+anchor_left = 0.82
+anchor_top = 0.123
+anchor_right = 0.82
+anchor_bottom = 0.123
+offset_left = -187.64
+offset_top = -45.704
+offset_right = 188.36
+offset_bottom = 45.296
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 60
 text = "Configuració"
@@ -86,18 +93,29 @@ unresizable = false
 
 [node name="Poble" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 918.0
-offset_top = 464.0
-offset_right = 1102.0
-offset_bottom = 607.0
+anchors_preset = -1
+anchor_left = 0.877
+anchor_top = 0.826
+anchor_right = 0.877
+anchor_bottom = 0.826
+offset_left = -92.304
+offset_top = -71.248
+offset_right = 91.696
+offset_bottom = 71.752
 texture_normal = ExtResource("10_nbbce")
 stretch_mode = 0
 
 [node name="Bosc" type="TextureButton" parent="."]
 texture_filter = 1
-offset_top = 397.0
-offset_right = 242.0
-offset_bottom = 639.0
+anchors_preset = -1
+anchor_left = 0.106
+anchor_top = 0.801
+anchor_right = 0.106
+anchor_bottom = 0.801
+offset_left = -122.112
+offset_top = -122.048
+offset_right = 119.888
+offset_bottom = 119.952
 scale = Vector2(1.00671, 1.00707)
 texture_normal = ExtResource("5_go78v")
 texture_disabled = ExtResource("6_ig3pi")
@@ -105,21 +123,28 @@ stretch_mode = 0
 
 [node name="Mine" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 482.0
-offset_top = 220.0
-offset_right = 664.0
-offset_bottom = 359.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.447
+anchor_right = 0.5
+anchor_bottom = 0.447
+offset_left = -94.0
+offset_top = -69.656
+offset_right = 88.0
+offset_bottom = 69.344
 texture_normal = ExtResource("7_fttsu")
 stretch_mode = 4
 
 [node name="RBosc" type="Label" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -180.0
-offset_right = 234.0
-offset_bottom = -93.0
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.789
+anchor_right = 0.104
+anchor_bottom = 0.789
+offset_left = -114.808
+offset_top = -43.272
+offset_right = 114.192
+offset_bottom = 43.728
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "Necessites una destral"
