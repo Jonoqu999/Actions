@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1724000539
+::res://::1726419333
 AnimatedSprite2D.gd::GDScript::-1::1723722769::0::1::::<>AnimatedSprite2D<>::
 Bosc.gd::GDScript::-1::1724000539::0::1::::<>Node<>::
 bosc.tscn::PackedScene::5219152971042912904::1724000539::0::1::::<><>::res://Bosc.gd<>uid://b2fxaqqdgk17j::::res://Textures/hit_bar.png<>uid://djw224w7yo807::::res://Textures/hi_bar_pointer.png
@@ -26,7 +26,7 @@ Materials.gd::GDScript::-1::1718727810::0::1::::<>Node<>::
 Materials.tscn::PackedScene::4168058371741669577::1718727810::0::1::::<><>::res://Mercat/Materials.gd<>uid://bqqvh5x5coe81::::res://Textures/Accoin1.png
 Mercat.gd::GDScript::-1::1718727810::0::1::::<>Node<>::
 mercat.tscn::PackedScene::4866744586081917144::1718727810::0::1::::<><>::res://Mercat/Mercat.gd<>uid://bqqvh5x5coe81::::res://Textures/Accoin1.png
-::res://Textures/::1724009881
+::res://Textures/::1724009885
 Accoin1.png::CompressedTexture2D::3543761395969302940::1718727810::1723659732::1::::<><>::
 Arbre_1.png::CompressedTexture2D::8567846292601741758::1724008970::1724009885::1::::<><>::
 Arbre_1_talat.png::CompressedTexture2D::4929193440455356021::1724009881::1724009885::1::::<><>::

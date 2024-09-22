@@ -1,8 +1,6 @@
-res://minant.tscn
 res://node_2d.tscn
-res://mina.tscn
-res://Mina.gd
 res://bosc.tscn
-res://Bosc.gd
+res://mina.tscn
+res://minant.tscn
+res://Mina.gd
 res://global Variables.gd
-res://minant.gd

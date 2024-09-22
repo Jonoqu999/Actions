@@ -18,9 +18,6 @@ func _ready():
 		$Rec2.show()
 	if $T3.disabled:
 		$Rec3.show()
-	$Timer.stop()
-	$NTimer.stop()
-	$Cooldown.stop()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

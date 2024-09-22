@@ -23,10 +23,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = -152.0
-offset_right = 65.0
-offset_bottom = -61.0
+offset_left = -120.0
+offset_top = -55.0
+offset_right = 67.0
+offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -40,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -185.0
-offset_top = 50.0
-offset_right = 109.0
-offset_bottom = 108.0
+offset_left = -183.0
+offset_top = 147.0
+offset_right = 111.0
+offset_bottom = 205.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
@@ -97,10 +97,10 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_tmhe2")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = 308.0
-offset_top = 308.0
-offset_right = 808.0
-offset_bottom = 335.0
+offset_left = 310.0
+offset_top = 405.0
+offset_right = 810.0
+offset_bottom = 432.0
 
 [node name="LTimer" type="Timer" parent="."]
 wait_time = 2.0
