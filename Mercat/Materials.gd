@@ -190,12 +190,24 @@ func _on_exit_pressed():
 
 
 func _on_fu_venta_pressed():
-	GlobalVariables.Accoins += $Fusta/SFusta.value * valorv.Fusta
-	GlobalVariables.diamant[0] -= $Fusta/SFusta.value
-	$Venta.text = "Has venut " + str($Pedra/SPedra.value) + " de diamant per " + str($Fusta/SFusta.value * valorv.Fusta) + " Accoins"
-	$Venta.show()
-	$Timer.start()
-	$Fusta/SFusta.value = 0
+	if !com:
+		GlobalVariables.Accoins += $Fusta/SFusta.value * valorv.Fusta
+		GlobalVariables.fusta[0] -= $Fusta/SFusta.value
+		$Venta.text = "Has venut " + str($Fusta/SFusta.value) + " de Fusta per " + str($Fusta/SFusta.value * valorv.Fusta) + " Accoins"
+		$Venta.show()
+		$Timer.start()
+		$Fusta/SFusta.value = 0
+	else:
+		if GlobalVariables.Accoins >= $Fusta/SFusta.value * valorc.Fusta:
+			GlobalVariables.Accoins -= $Fusta/SFusta.value * valorv.Fusta
+			GlobalVariables.fusta[0] += $Fusta/SFusta.value
+			$Venta.text = "Has comprat " + str($Fusta/SFusta.value) + " de Fusta per " + str($Fusta/SFusta.value * valorv.Fusta) + " Accoins"
+			$Venta.show()
+			$Timer.start()
+		else:
+			$Venta.text = "No pots comprar " + str($Fusta/SFusta.value)
+			$Venta.show()
+			$Timer.start()
 
 
 func _on_check_box_toggled(toggled_on):

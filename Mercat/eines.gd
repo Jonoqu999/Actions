@@ -10,8 +10,8 @@ func _process(_delta):
 	$Accoins/Accoins.text = str(GlobalVariables.Accoins)
 	$Pic/pice.text = "Accoins: " + str(_get_price(1.75*GlobalVariables.pic_lvl,100))
 	$Axe/pice.text = "Accoins: " + str(_get_price(1.85*GlobalVariables.axe_lvl,1000))
-	$Pic/lvl.text = "lvl: " + str(GlobalVariables.pic_lvl)
-	$Axe/lvl.text = "lvl: " + str(GlobalVariables.axe_lvl)
+	$Pic/lvl.text = "Nivell: " + str(GlobalVariables.pic_lvl)
+	$Axe/lvl.text = "Nivell: " + str(GlobalVariables.axe_lvl)
 
 
 func _on_pic_upgrade_pressed():

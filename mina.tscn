@@ -27,7 +27,7 @@ offset_bottom = 118.0
 size_flags_horizontal = 6
 auto_translate = false
 theme_override_font_sizes/font_size = 60
-text = "Exit"
+text = "Sortida"
 
 [node name="T1" type="Button" parent="."]
 anchors_preset = -1
@@ -42,7 +42,7 @@ offset_bottom = 45.352
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Tier 1"
+text = "Nivell 1"
 
 [node name="T2" type="Button" parent="."]
 anchors_preset = 8
@@ -57,7 +57,7 @@ offset_bottom = 45.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Tier 2"
+text = "Nivell 2"
 
 [node name="T3" type="Button" parent="."]
 anchors_preset = -1
@@ -72,7 +72,7 @@ offset_bottom = 45.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Tier 3"
+text = "Nivell 3"
 
 [node name="Title" type="Label" parent="."]
 offset_left = 433.0
