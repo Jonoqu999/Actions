@@ -28,15 +28,7 @@ offset_top = 274.0
 offset_right = 1091.0
 offset_bottom = 340.0
 theme_override_font_sizes/font_size = 30
-text = "Encantaments"
-
-[node name="Label" type="Label" parent="."]
-offset_left = 892.0
-offset_top = 227.0
-offset_right = 1066.0
-offset_bottom = 272.0
-theme_override_font_sizes/font_size = 30
-text = "EN TREBALL"
+text = "Construir casa"
 
 [node name="Exit" type="Button" parent="."]
 offset_left = 37.0
