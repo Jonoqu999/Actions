@@ -15,23 +15,12 @@ func _process(_delta):
 func _on_save_pressed():
 	var path = "res://Users/"+str($TabContainer/Compte/MarginContainer/GridContainer/User.text)+".data"
 	var passw = FileAccess.open(path,FileAccess.READ)
-	if passw:
+	if passw != null:
 		var con = JSON.parse_string(passw.get_line())
 		if con.password == str($TabContainer/Compte/MarginContainer/GridContainer/Pass.text):
 			passw.close()
 			var file = FileAccess.open(path,FileAccess.WRITE)
-			var inv : Dictionary = {
-				pedra = GlobalVariables.pedra,
-				ferro = GlobalVariables.ferro,
-				gold = GlobalVariables.gold,
-				maragda = GlobalVariables.maragda,
-				diamant = GlobalVariables.diamant,
-				accoins = GlobalVariables.Accoins,
-				pic_lvl = GlobalVariables.pic_lvl,
-				axe_lvl = GlobalVariables.axe_lvl,
-				poble = GlobalVariables.poble,
-				cases = GlobalVariables.cases,
-				password = $TabContainer/Compte/MarginContainer/GridContainer/Pass.text}
+			var inv: Dictionary = _get_data_to_store()
 			var data = JSON.stringify(inv)
 			file.store_line(data)
 			file.close()
@@ -41,17 +30,7 @@ func _on_save_pressed():
 			_alert("Usuari ja exsistent o contrasenya incorrecta")
 	else:
 		var file = FileAccess.open(path,FileAccess.WRITE)
-		var inv : Dictionary = {
-			pedra = GlobalVariables.pedra,
-			ferro = GlobalVariables.ferro,
-			gold = GlobalVariables.gold,
-			maragda = GlobalVariables.maragda,
-			diamant = GlobalVariables.diamant,
-			accoins = GlobalVariables.Accoins,
-			pic_lvl = GlobalVariables.pic_lvl,
-			axe_lvl = GlobalVariables.axe_lvl,
-			poble = GlobalVariables.poble,
-			password = $TabContainer/Compte/MarginContainer/GridContainer/Pass.text}
+		var inv : Dictionary = _get_data_to_store()
 		var data = JSON.stringify(inv)
 		file.store_line(data)
 		file.close()
@@ -86,6 +65,10 @@ func _on_load_pressed():
 				GlobalVariables.diamant = inv.diamant
 			else:
 				GlobalVariables.diamant = [0,false]
+			if inv.has("fusta"):
+				GlobalVariables.fusta = inv.fusta
+			else:
+				GlobalVariables.fusta = [0,false]
 			if inv.has("accoins"):
 				GlobalVariables.Accoins = inv.accoins
 			else:
@@ -116,3 +99,19 @@ func _alert(strr):
 func _on_timer_timeout():
 	$TabContainer/Compte/MarginContainer/GridContainer/Alert.hide()
 	$Timer.stop()
+
+func _get_data_to_store() -> Dictionary:
+	var inv : Dictionary = {
+				pedra = GlobalVariables.pedra,
+				ferro = GlobalVariables.ferro,
+				gold = GlobalVariables.gold,
+				maragda = GlobalVariables.maragda,
+				diamant = GlobalVariables.diamant,
+				fusta = GlobalVariables.fusta,
+				accoins = GlobalVariables.Accoins,
+				pic_lvl = GlobalVariables.pic_lvl,
+				axe_lvl = GlobalVariables.axe_lvl,
+				poble = GlobalVariables.poble,
+				cases = GlobalVariables.cases,
+				password = $TabContainer/Compte/MarginContainer/GridContainer/Pass.text}
+	return inv

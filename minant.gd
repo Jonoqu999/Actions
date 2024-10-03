@@ -57,7 +57,7 @@ func _on_minar_pressed(obtenibles):
 						$NouMin.text = "Has descobert pedra"
 						$NouMin.show()
 						$NTimer.start()
-					nombre = randi_range(1,5)
+					nombre = _aplicar_mults(randi_range(1,5))
 					GlobalVariables.pedra[0] += nombre
 					$Mineral.show()
 					$Mineral.text = "Has obtingut " + str(nombre) + " Pedres"
@@ -68,7 +68,7 @@ func _on_minar_pressed(obtenibles):
 						$NouMin.text = "Has descobert ferro"
 						$NouMin.show()
 						$NTimer.start()
-					nombre = randi_range(1,5)
+					nombre = _aplicar_mults(randi_range(1,5))
 					GlobalVariables.ferro[0] += nombre
 					$Mineral.show()
 					$Mineral.text = "Has obtingut " + str(nombre) + " de Ferro"
@@ -79,7 +79,7 @@ func _on_minar_pressed(obtenibles):
 						$NouMin.text = "Has descobert or"
 						$NouMin.show()
 						$NTimer.start()
-					nombre = randi_range(1,4)
+					nombre = _aplicar_mults(randi_range(1,4))
 					GlobalVariables.gold[0] += nombre
 					$Mineral.show()
 					$Mineral.text = "Has obtingut " + str(nombre) + " d'Or"
@@ -90,7 +90,7 @@ func _on_minar_pressed(obtenibles):
 						$NouMin.text = "Has descobert margda"
 						$NouMin.show()
 						$NTimer.start()
-					nombre = randi_range(1,3)
+					nombre = _aplicar_mults(randi_range(1,3))
 					GlobalVariables.maragda[0] += nombre
 					$Mineral.show()
 					$Mineral.text = "Has obtingut " + str(nombre) + " Maragdes"
@@ -101,7 +101,7 @@ func _on_minar_pressed(obtenibles):
 						$NouMin.text = "Has descobert diamant"
 						$NouMin.show()
 						$NTimer.start()
-					nombre = randi_range(1,2)
+					nombre = _aplicar_mults(randi_range(1,2))
 					GlobalVariables.diamant[0] += nombre
 					$Mineral.show()
 					$Mineral.text = "Has obtingut " + str(nombre) + " Diamants"
@@ -115,6 +115,11 @@ func _on_minar_pressed(obtenibles):
 
 func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://mina.tscn")
+
+func _aplicar_mults(value):
+	value *= max(1,1.1*GlobalVariables.cases)
+	value *= max(1,1.5*(GlobalVariables.pic_lvl-1))
+	return value
 
 
 func _on_cooldown_timeout():

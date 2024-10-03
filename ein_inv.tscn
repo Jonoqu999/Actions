@@ -52,6 +52,7 @@ theme_override_font_sizes/font_size = 60
 text = "Sortida"
 
 [node name="Ein" type="Button" parent="Exit"]
+layout_mode = 0
 offset_left = 229.0
 offset_top = -1.0
 offset_right = 389.0

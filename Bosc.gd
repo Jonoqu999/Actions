@@ -54,12 +54,12 @@ func _on_talar_pressed():
 		$StunnedTimer.stop()
 		$StunnedTimer.start()
 
-func _alert(str):
+func _alert(text:String):
 	$Obt.show()
-	$Obt.text = str
+	$Obt.text = text
 	$ObTimer.start()
 
-func _text(num):
+func _text(num:int):
 	var txt
 	if num == 1:
 		txt = "Has obtingt 1 fusta"
@@ -93,7 +93,7 @@ func _on_l_timer_timeout():
 	$ProgressBar.value = tree_health
 	$LTimer.stop()
 
-func _stunned(sec:int):
+func _stunned(sec:float):
 	$StunnedTimer.wait_time = sec
 	$StunnedTimer.start()
 	stunned = true

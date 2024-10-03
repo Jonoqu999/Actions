@@ -1,6 +1,7 @@
 extends Node
 var ten = {Pedra=15,Ferro=5,Or=3}
-var ein = {Pedra=50,Ferro=15,Or=10}
+var ein = {Pedra=20,Ferro=10,Or=5}
+var preu_casa = {Pedra = 50, Ferro = 10, Fusta = 20}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,10 +17,7 @@ func _ready():
 	else:
 		$RepEin.show()
 		$Ein.disabled = true
-	if GlobalVariables.poble.en:
-		$En.disabled = false
-	else:
-		$En.disabled = true
+	$Cases.text = "Cases: " + str(GlobalVariables.cases)
 	$Accoins/Accoins.text = str(GlobalVariables.Accoins)
 
 
@@ -58,3 +56,33 @@ func _on_r_ein_pressed():
 			$RepEin.hide()
 			$Ein.disabled = false
 			GlobalVariables.poble.ein = true
+
+
+func _on_en_pressed():
+	if _pot_permetre_casa():
+		GlobalVariables.cases += 1
+		$Cases.text = "Cases: "+ str(GlobalVariables.cases)
+		$Timer.start()
+		$NovaCasa.show()
+
+func _pot_permetre_casa() -> bool:
+	if GlobalVariables.cases < 5:
+		print("Pedra ", GlobalVariables.pedra[0] >= preu_casa.Pedra*_modificador_cases())
+		print("Ferro ", GlobalVariables.ferro[0] >= preu_casa.Ferro*_modificador_cases())
+		print("Fusta ", GlobalVariables.fusta[0] >= preu_casa.Fusta*_modificador_cases())
+		if GlobalVariables.pedra[0] >= preu_casa.Pedra*_modificador_cases() and GlobalVariables.ferro[0] >= preu_casa.Pedra*_modificador_cases() and GlobalVariables.fusta[0] >= preu_casa.Fusta*_modificador_cases():
+			GlobalVariables.pedra[0] -= preu_casa.Pedra*_modificador_cases()
+			GlobalVariables.ferro[0] -= preu_casa.Ferro*_modificador_cases()
+			GlobalVariables.fusta[0] -= preu_casa.Fusta*_modificador_cases()
+			return true
+		else:
+			return false
+	else:
+		return false
+
+func _modificador_cases() -> int:
+	return int(max(1,1.2*GlobalVariables.cases-1))
+
+
+func _on_timer_timeout():
+	$NovaCasa.hide()
