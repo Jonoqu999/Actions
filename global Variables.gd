@@ -8,6 +8,8 @@ var maragda = [0,false]
 var diamant = [0,false]
 var fusta = [0,false]
 
+var cases = 0
+
 var pic_lvl = 1
 var axe_lvl = 0
 

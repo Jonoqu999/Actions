@@ -30,6 +30,7 @@ func _on_save_pressed():
 				pic_lvl = GlobalVariables.pic_lvl,
 				axe_lvl = GlobalVariables.axe_lvl,
 				poble = GlobalVariables.poble,
+				cases = GlobalVariables.cases,
 				password = $TabContainer/Compte/MarginContainer/GridContainer/Pass.text}
 			var data = JSON.stringify(inv)
 			file.store_line(data)

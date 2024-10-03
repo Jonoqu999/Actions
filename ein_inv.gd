@@ -26,3 +26,7 @@ func Ein_show():
 func Ein_hide():
 	$Pic.hide()
 	$Axe.hide()
+
+
+func _on_ein_pressed():
+	get_tree().change_scene_to_file("res://Inv.tscn")
