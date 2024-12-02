@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0nbkvfojrafh"]
 
-[ext_resource type="Script" path="res://Mercat/Materials.gd" id="1_g4gkx"]
+[ext_resource type="Script" path="res://Escenes/Mercat/Materials.gd" id="1_g4gkx"]
 [ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_mys38"]
 [ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="3_cnh3o"]
 [ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="4_tdjth"]

@@ -25,30 +25,30 @@ func _process(_delta):
 	pass
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://node_2d.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Menú/Menú.tscn")
 
 
 func _on_t_1_pressed():
 	GlobalVariables.loot_tabel = ob_t1
 	GlobalVariables.rock_health = 10
 	
-	get_tree().change_scene_to_file("res://minant.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mina/Minant.tscn")
 
 
 func _on_t_2_pressed():
 	GlobalVariables.loot_tabel = ob_t2
 	GlobalVariables.rock_health = 20
 	
-	get_tree().change_scene_to_file("res://minant.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mina/Minant.tscn")
 
 
 func _on_t_3_pressed():
 	GlobalVariables.loot_tabel = ob_t3
 	GlobalVariables.rock_health = 30
 	
-	get_tree().change_scene_to_file("res://minant.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mina/Minant.tscn")
 
 
 func _on_inv_pressed():
-	GlobalVariables.previous_sceen = "res://mina.tscn"
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	GlobalVariables.previous_sceen = "res://Escenes/Mina/Mina.tscn"
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Materials.tscn")

@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://fyjb02e133dq"]
 
-[ext_resource type="Script" path="res://Mercat/eines.gd" id="1_asfbd"]
-[ext_resource type="Texture2D" uid="uid://htjjbbs8sx57" path="res://Textures/Pixaxe.png" id="2_6qbcw"]
-[ext_resource type="Texture2D" uid="uid://c1rhffggn1iwy" path="res://Textures/Axe1.png" id="3_j7iq7"]
-[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="4_8573c"]
-[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="5_aclab"]
-[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="6_w88eg"]
+[ext_resource type="Script" path="res://Escenes/Mercat/Eines.gd" id="1_fb014"]
+[ext_resource type="Texture2D" uid="uid://htjjbbs8sx57" path="res://Textures/Pixaxe.png" id="2_2qq8s"]
+[ext_resource type="Texture2D" uid="uid://c1rhffggn1iwy" path="res://Textures/Axe1.png" id="3_jtn7f"]
+[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="4_fma3p"]
+[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="5_qw0oe"]
+[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="6_6sri8"]
 
 [node name="Eines" type="Node"]
-script = ExtResource("1_asfbd")
+script = ExtResource("1_fb014")
 
 [node name="Pic" type="CanvasGroup" parent="."]
 
@@ -44,7 +44,7 @@ autowrap_mode = 3
 texture_filter = 1
 position = Vector2(150, 207)
 scale = Vector2(2.90625, 2.99268)
-texture = ExtResource("2_6qbcw")
+texture = ExtResource("2_2qq8s")
 
 [node name="Axe" type="CanvasGroup" parent="."]
 position = Vector2(217, -1)
@@ -81,7 +81,7 @@ autowrap_mode = 3
 texture_filter = 1
 position = Vector2(150, 207)
 scale = Vector2(2.90625, 2.99268)
-texture = ExtResource("3_j7iq7")
+texture = ExtResource("3_jtn7f")
 
 [node name="Exit" type="Button" parent="."]
 offset_left = 28.0
@@ -99,7 +99,7 @@ text = "Sortida"
 texture_filter = 1
 position = Vector2(1087, 52)
 scale = Vector2(2.25, 2.25)
-texture = ExtResource("4_8573c")
+texture = ExtResource("4_fma3p")
 
 [node name="Accoins" type="Label" parent="Accoins"]
 anchors_preset = 1
@@ -125,8 +125,8 @@ offset_left = -43.952
 offset_top = -44.28
 offset_right = 44.048
 offset_bottom = 43.72
-texture_normal = ExtResource("5_aclab")
-texture_hover = ExtResource("6_w88eg")
+texture_normal = ExtResource("5_qw0oe")
+texture_hover = ExtResource("6_6sri8")
 ignore_texture_size = true
 stretch_mode = 0
 

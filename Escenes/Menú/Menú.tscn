@@ -1,20 +1,20 @@
 [gd_scene load_steps=13 format=3 uid="uid://bkfj70oe3up3m"]
 
-[ext_resource type="Script" path="res://node_2d.gd" id="1_hx1fd"]
-[ext_resource type="Texture2D" uid="uid://dk6py6mgps8dv" path="res://Textures/Main-Background.png" id="2_1l66w"]
-[ext_resource type="Texture2D" uid="uid://ctjhqgskk7f2q" path="res://Textures/Main-Bosc-Hover.png" id="4_q7r1a"]
-[ext_resource type="PackedScene" uid="uid://dxihj0qcawu0r" path="res://copnfig.tscn" id="5_6iiyh"]
-[ext_resource type="Texture2D" uid="uid://cq7y6088mk0wq" path="res://Textures/Main-Bosc.png" id="5_go78v"]
-[ext_resource type="Texture2D" uid="uid://cuk6mmo3duq70" path="res://Textures/Main-Mina-hover.png" id="5_gvry1"]
-[ext_resource type="Texture2D" uid="uid://do8tkdmrlewme" path="res://Textures/Main-Bosc-Dis.png" id="6_ig3pi"]
-[ext_resource type="Texture2D" uid="uid://cb71vjpjbdeti" path="res://Textures/pixil-layer-Mina.png" id="7_fttsu"]
-[ext_resource type="Texture2D" uid="uid://dyh4wps538dyq" path="res://Textures/Main-Poble-Hover.png" id="9_c8vb2"]
-[ext_resource type="Texture2D" uid="uid://3psin4x2hdvo" path="res://Textures/Main-Poble.png" id="10_nbbce"]
-[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="11_w47fh"]
-[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="12_5k61h"]
+[ext_resource type="Script" path="res://Escenes/Menú/Menú.gd" id="1_3wa4n"]
+[ext_resource type="Texture2D" uid="uid://dk6py6mgps8dv" path="res://Textures/Main-Background.png" id="2_cgkyf"]
+[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="3_qa76t"]
+[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="4_5l6vc"]
+[ext_resource type="Texture2D" uid="uid://dyh4wps538dyq" path="res://Textures/Main-Poble-Hover.png" id="5_selkt"]
+[ext_resource type="Texture2D" uid="uid://cuk6mmo3duq70" path="res://Textures/Main-Mina-hover.png" id="6_n7vmg"]
+[ext_resource type="Texture2D" uid="uid://ctjhqgskk7f2q" path="res://Textures/Main-Bosc-Hover.png" id="7_xtrt4"]
+[ext_resource type="PackedScene" uid="uid://dxihj0qcawu0r" path="res://Escenes/Configuració/Copnfig.tscn" id="8_c7o7q"]
+[ext_resource type="Texture2D" uid="uid://3psin4x2hdvo" path="res://Textures/Main-Poble.png" id="9_woxjn"]
+[ext_resource type="Texture2D" uid="uid://cq7y6088mk0wq" path="res://Textures/Main-Bosc.png" id="10_h1prf"]
+[ext_resource type="Texture2D" uid="uid://do8tkdmrlewme" path="res://Textures/Main-Bosc-Dis.png" id="11_ex5s6"]
+[ext_resource type="Texture2D" uid="uid://cb71vjpjbdeti" path="res://Textures/pixil-layer-Mina.png" id="12_t06ln"]
 
 [node name="Main" type="Node"]
-script = ExtResource("1_hx1fd")
+script = ExtResource("1_3wa4n")
 
 [node name="Bc" type="TextureRect" parent="."]
 texture_filter = 1
@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_1l66w")
+texture = ExtResource("2_cgkyf")
 stretch_mode = 4
 
 [node name="Inv" type="TextureButton" parent="."]
@@ -37,8 +37,8 @@ offset_left = -44.208
 offset_top = -44.264
 offset_right = 43.792
 offset_bottom = 43.736
-texture_normal = ExtResource("11_w47fh")
-texture_hover = ExtResource("12_5k61h")
+texture_normal = ExtResource("3_qa76t")
+texture_hover = ExtResource("4_5l6vc")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -63,7 +63,7 @@ offset_left = 708.0
 offset_top = 254.0
 offset_right = 1306.0
 offset_bottom = 810.0
-texture = ExtResource("9_c8vb2")
+texture = ExtResource("5_selkt")
 
 [node name="Mine_Hover" type="TextureRect" parent="."]
 visible = false
@@ -72,7 +72,7 @@ offset_left = 199.0
 offset_top = 5.0
 offset_right = 938.0
 offset_bottom = 569.0
-texture = ExtResource("5_gvry1")
+texture = ExtResource("6_n7vmg")
 stretch_mode = 5
 
 [node name="Bosc_Hover" type="TextureRect" parent="."]
@@ -82,9 +82,9 @@ offset_left = -276.0
 offset_top = 90.0
 offset_right = 582.0
 offset_bottom = 939.0
-texture = ExtResource("4_q7r1a")
+texture = ExtResource("7_xtrt4")
 
-[node name="Copnfig" parent="." instance=ExtResource("5_6iiyh")]
+[node name="Copnfig" parent="." instance=ExtResource("8_c7o7q")]
 mode = 2
 initial_position = 0
 position = Vector2i(250, 70)
@@ -102,7 +102,7 @@ offset_left = -92.304
 offset_top = -71.248
 offset_right = 91.696
 offset_bottom = 71.752
-texture_normal = ExtResource("10_nbbce")
+texture_normal = ExtResource("9_woxjn")
 stretch_mode = 0
 
 [node name="Bosc" type="TextureButton" parent="."]
@@ -117,8 +117,8 @@ offset_top = -122.048
 offset_right = 119.888
 offset_bottom = 119.952
 scale = Vector2(1.00671, 1.00707)
-texture_normal = ExtResource("5_go78v")
-texture_disabled = ExtResource("6_ig3pi")
+texture_normal = ExtResource("10_h1prf")
+texture_disabled = ExtResource("11_ex5s6")
 stretch_mode = 0
 
 [node name="Mine" type="TextureButton" parent="."]
@@ -132,7 +132,7 @@ offset_left = -94.0
 offset_top = -69.656
 offset_right = 88.0
 offset_bottom = 69.344
-texture_normal = ExtResource("7_fttsu")
+texture_normal = ExtResource("12_t06ln")
 stretch_mode = 4
 
 [node name="RBosc" type="Label" parent="."]

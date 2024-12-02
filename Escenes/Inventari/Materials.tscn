@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://c45i550berpjc"]
 
-[ext_resource type="Script" path="res://Inv.gd" id="1_a1bar"]
-[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_teoun"]
+[ext_resource type="Script" path="res://Escenes/Inventari/Materials.gd" id="1_o225o"]
+[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_583x8"]
 
 [node name="Inventari" type="Node"]
-script = ExtResource("1_a1bar")
+script = ExtResource("1_o225o")
 
 [node name="fusta" type="Label" parent="."]
 anchors_preset = 4
@@ -123,7 +123,7 @@ text = "Eines"
 texture_filter = 1
 position = Vector2(1087, 52)
 scale = Vector2(2.25, 2.25)
-texture = ExtResource("2_teoun")
+texture = ExtResource("2_583x8")
 
 [node name="Accoins" type="Label" parent="Accoins"]
 anchors_preset = 1

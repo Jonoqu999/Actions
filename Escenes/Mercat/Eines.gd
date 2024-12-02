@@ -36,9 +36,9 @@ func _on_exit_pressed():
 
 
 func _on_mat_pressed():
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Materials.tscn")
 
 
 func _on_inv_pressed():
-	GlobalVariables.previous_sceen = "res://Mercat/eines.tscn"
-	get_tree().change_scene_to_file("res://ein_inv.tscn")
+	GlobalVariables.previous_sceen = "res://Escenes/Mercat/Eines.tscn"
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Eines.tscn")

@@ -1,34 +1,34 @@
 [gd_scene load_steps=13 format=3 uid="uid://c1rek1s67swto"]
 
-[ext_resource type="Script" path="res://minant.gd" id="1_h82uf"]
-[ext_resource type="Texture2D" uid="uid://dk6py6mgps8dv" path="res://Textures/Main-Background.png" id="2_4khw6"]
-[ext_resource type="Texture2D" uid="uid://c8vcokufrwnwc" path="res://Textures/Roca_1_1.png" id="3_k86ix"]
-[ext_resource type="Texture2D" uid="uid://dcw0fkd8sn23u" path="res://Textures/Roca_1_2.png" id="5_8mdlb"]
-[ext_resource type="Texture2D" uid="uid://rpo5ovi0kgu1" path="res://Textures/Roca_1_3.png" id="6_q0kj8"]
-[ext_resource type="Texture2D" uid="uid://64hhbvtnsmjo" path="res://Textures/Roca_1_4.png" id="7_yb7c5"]
-[ext_resource type="Texture2D" uid="uid://d2eivbg16gwub" path="res://Textures/Roca_1_5.png" id="8_p3q2d"]
-[ext_resource type="Texture2D" uid="uid://b7kjhscndbdbs" path="res://Textures/Roca_vida_bc.png" id="8_twko7"]
-[ext_resource type="Texture2D" uid="uid://bilprslgc3x5y" path="res://Textures/Roca_vida.png" id="9_v1hfu"]
-[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="10_fyg8f"]
-[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="11_ol6sp"]
+[ext_resource type="Script" path="res://Escenes/Mina/Minant.gd" id="1_rr641"]
+[ext_resource type="Texture2D" uid="uid://dk6py6mgps8dv" path="res://Textures/Main-Background.png" id="2_8q3ls"]
+[ext_resource type="Texture2D" uid="uid://c8vcokufrwnwc" path="res://Textures/Roca_1_1.png" id="3_7k7p6"]
+[ext_resource type="Texture2D" uid="uid://dcw0fkd8sn23u" path="res://Textures/Roca_1_2.png" id="4_mf6bx"]
+[ext_resource type="Texture2D" uid="uid://rpo5ovi0kgu1" path="res://Textures/Roca_1_3.png" id="5_56kr8"]
+[ext_resource type="Texture2D" uid="uid://64hhbvtnsmjo" path="res://Textures/Roca_1_4.png" id="6_tvwto"]
+[ext_resource type="Texture2D" uid="uid://d2eivbg16gwub" path="res://Textures/Roca_1_5.png" id="7_4ptf5"]
+[ext_resource type="Texture2D" uid="uid://b7kjhscndbdbs" path="res://Textures/Roca_vida_bc.png" id="8_23exe"]
+[ext_resource type="Texture2D" uid="uid://bilprslgc3x5y" path="res://Textures/Roca_vida.png" id="9_d8gn7"]
+[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="10_5ogn7"]
+[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="11_sl8vk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nq6hh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_k86ix")
+"texture": ExtResource("3_7k7p6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_8mdlb")
+"texture": ExtResource("4_mf6bx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_q0kj8")
+"texture": ExtResource("5_56kr8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_yb7c5")
+"texture": ExtResource("6_tvwto")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_p3q2d")
+"texture": ExtResource("7_4ptf5")
 }],
 "loop": true,
 "name": &"default",
@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [node name="Node" type="Node"]
-script = ExtResource("1_h82uf")
+script = ExtResource("1_rr641")
 
 [node name="Bc" type="TextureRect" parent="."]
 texture_filter = 1
@@ -45,7 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_4khw6")
+texture = ExtResource("2_8q3ls")
 expand_mode = 1
 stretch_mode = 6
 
@@ -128,8 +128,8 @@ offset_right = 159.672
 offset_bottom = 16.096
 step = 0.01
 value = 100.0
-texture_under = ExtResource("8_twko7")
-texture_progress = ExtResource("9_v1hfu")
+texture_under = ExtResource("8_23exe")
+texture_progress = ExtResource("9_d8gn7")
 radial_initial_angle = 134.5
 radial_fill_degrees = 0.0
 
@@ -144,8 +144,8 @@ offset_left = -43.8801
 offset_top = -44.28
 offset_right = 44.1199
 offset_bottom = 43.72
-texture_normal = ExtResource("10_fyg8f")
-texture_hover = ExtResource("11_ol6sp")
+texture_normal = ExtResource("10_5ogn7")
+texture_hover = ExtResource("11_sl8vk")
 ignore_texture_size = true
 stretch_mode = 0
 

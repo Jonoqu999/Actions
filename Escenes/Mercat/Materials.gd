@@ -186,7 +186,7 @@ func _on_timer_timeout():
 
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://Mercat/mercat.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mercat/Mercat.tscn")
 
 
 func _on_fu_venta_pressed():
@@ -215,5 +215,5 @@ func _on_check_box_toggled(toggled_on):
 
 
 func _on_inv_pressed():
-	GlobalVariables.previous_sceen = "res://Mercat/Materials.tscn"
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	GlobalVariables.previous_sceen = "res://Escenes/Mercat/Materials.tscn"
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Materials.tscn")

@@ -1,12 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://cblqtptnb1l8k"]
 
-[ext_resource type="Script" path="res://Mercat/Mercat.gd" id="1_key6u"]
-[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_4um4g"]
-[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="3_mixn5"]
-[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="4_7faya"]
+[ext_resource type="Script" path="res://Escenes/Mercat/Mercat.gd" id="1_cg4ku"]
+[ext_resource type="Texture2D" uid="uid://bqqvh5x5coe81" path="res://Textures/Accoin1.png" id="2_lmdb6"]
+[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="3_wu1pv"]
+[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="4_26l2m"]
 
 [node name="Mercat" type="Node"]
-script = ExtResource("1_key6u")
+script = ExtResource("1_cg4ku")
 
 [node name="Mat" type="Button" parent="."]
 offset_left = 99.0
@@ -48,7 +48,7 @@ text = "Sortida"
 texture_filter = 1
 position = Vector2(1087, 52)
 scale = Vector2(2.25, 2.25)
-texture = ExtResource("2_4um4g")
+texture = ExtResource("2_lmdb6")
 
 [node name="Accoins" type="Label" parent="Accoins"]
 anchors_preset = 1
@@ -161,8 +161,8 @@ offset_left = -44.384
 offset_top = -44.28
 offset_right = 43.616
 offset_bottom = 43.72
-texture_normal = ExtResource("3_mixn5")
-texture_hover = ExtResource("4_7faya")
+texture_normal = ExtResource("3_wu1pv")
+texture_hover = ExtResource("4_26l2m")
 ignore_texture_size = true
 stretch_mode = 0
 

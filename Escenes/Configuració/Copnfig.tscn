@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dxihj0qcawu0r"]
 
-[ext_resource type="Script" path="res://copnfig.gd" id="1_u5tf5"]
+[ext_resource type="Script" path="res://Escenes/Configuració/Copnfig.gd" id="1_u5tf5"]
 
 [node name="Copnfig" type="Popup"]
 title = "Config"

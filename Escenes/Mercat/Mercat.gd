@@ -27,15 +27,15 @@ func _process(_delta):
 
 
 func _on_mat_pressed():
-	get_tree().change_scene_to_file("res://Mercat/Materials.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mercat/Materials.tscn")
 
 
 func _on_ein_pressed():
-	get_tree().change_scene_to_file("res://Mercat/eines.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mercat/Eines.tscn")
 
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://node_2d.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Menú/Menú.tscn")
 
 
 func _on_r_mat_pressed():
@@ -89,5 +89,5 @@ func _on_timer_timeout():
 
 
 func _on_inv_pressed():
-	GlobalVariables.previous_sceen = "res://Mercat/mercat.tscn"
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	GlobalVariables.previous_sceen = "res://Escenes/Mercat/Mercat.tscn"
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Materials.tscn")

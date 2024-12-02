@@ -29,4 +29,4 @@ func Ein_hide():
 
 
 func _on_ein_pressed():
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Materials.tscn")

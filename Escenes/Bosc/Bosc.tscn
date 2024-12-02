@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://cgmgxmcei4el1"]
 
-[ext_resource type="Script" path="res://Bosc.gd" id="1_g2c1k"]
-[ext_resource type="Texture2D" uid="uid://b2fxaqqdgk17j" path="res://Textures/hit_bar.png" id="2_vdk8x"]
-[ext_resource type="Texture2D" uid="uid://djw224w7yo807" path="res://Textures/hi_bar_pointer.png" id="3_tmhe2"]
-[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="4_gt4sq"]
-[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="5_4v51i"]
+[ext_resource type="Script" path="res://Escenes/Bosc/Bosc.gd" id="1_4lf3i"]
+[ext_resource type="Texture2D" uid="uid://b2fxaqqdgk17j" path="res://Textures/hit_bar.png" id="2_uxoou"]
+[ext_resource type="Texture2D" uid="uid://djw224w7yo807" path="res://Textures/hi_bar_pointer.png" id="3_7mqkj"]
+[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="4_fg3rs"]
+[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="5_iepwc"]
 
 [node name="Bosc" type="Node"]
-script = ExtResource("1_g2c1k")
+script = ExtResource("1_4lf3i")
 
 [node name="Exit" type="Button" parent="."]
 offset_left = 28.0
@@ -84,7 +84,7 @@ offset_top = 46.0
 offset_right = 361.888
 offset_bottom = 684.0
 rotation = 1.5708
-texture = ExtResource("2_vdk8x")
+texture = ExtResource("2_uxoou")
 
 [node name="Hit_bar_pointer" type="TextureRect" parent="."]
 texture_filter = 1
@@ -96,7 +96,7 @@ offset_top = 67.0
 offset_right = -1328.0
 offset_bottom = 99.0
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("3_tmhe2")
+texture = ExtResource("3_7mqkj")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = 310.0
@@ -121,8 +121,8 @@ offset_left = -44.4241
 offset_top = -44.28
 offset_right = 43.5759
 offset_bottom = 43.72
-texture_normal = ExtResource("4_gt4sq")
-texture_hover = ExtResource("5_4v51i")
+texture_normal = ExtResource("4_fg3rs")
+texture_hover = ExtResource("5_iepwc")
 ignore_texture_size = true
 stretch_mode = 0
 

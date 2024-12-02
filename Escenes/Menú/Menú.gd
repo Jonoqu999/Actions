@@ -29,16 +29,16 @@ func _main_hide():
 	$Copnfig.hide()
 
 func _on_mina_pressed():
-	get_tree().change_scene_to_file("res://mina.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mina/Mina.tscn")
 
 
 func _on_inventari_pressed():
-	GlobalVariables.previous_sceen = "res://node_2d.tscn"
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	GlobalVariables.previous_sceen = "res://Escenes/Menú/Menú.tscn"
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Materials.tscn")
 
 
 func _on_tenda_button_pressed():
-	get_tree().change_scene_to_file("res://Mercat/mercat.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mercat/Mercat.tscn")
 
 
 func _on_config_button_pressed():
@@ -47,7 +47,7 @@ func _on_config_button_pressed():
 
 func _on_bosc_pressed():
 	if GlobalVariables.axe_lvl > 0:
-		get_tree().change_scene_to_file("res://bosc.tscn")
+		get_tree().change_scene_to_file("res://Escenes/Bosc/Bosc.tscn")
 
 
 func _on_texture_button_mouse_entered():

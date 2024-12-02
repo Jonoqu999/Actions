@@ -48,4 +48,4 @@ func _on_exit_pressed():
 
 
 func _on_eines_pressed():
-	get_tree().change_scene_to_file("res://ein_inv.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Eines.tscn")

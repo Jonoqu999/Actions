@@ -114,7 +114,7 @@ func _on_minar_pressed(obtenibles):
 		$Timer.start()
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://mina.tscn")
+	get_tree().change_scene_to_file("res://Escenes/Mina/Mina.tscn")
 
 func _aplicar_mults(value):
 	value *= max(1,1.1*GlobalVariables.cases)
@@ -142,5 +142,5 @@ func _on_l_timer_timeout():
 
 
 func _on_inv_pressed():
-	GlobalVariables.previous_sceen = "res://minant.tscn"
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	GlobalVariables.previous_sceen = "res://Escenes/Mina/Minant.tscn"
+	get_tree().change_scene_to_file("res://Escenes/Inventari/Materials.tscn")
