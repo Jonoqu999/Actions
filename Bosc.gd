@@ -102,3 +102,8 @@ func _stunned(sec:float):
 func _on_stunned_timer_timeout():
 	$StunnedAlert.visible = false
 	stunned = false
+
+
+func _on_inv_pressed():
+	GlobalVariables.previous_sceen = "res://bosc.tscn"
+	get_tree().change_scene_to_file("res://Inv.tscn")

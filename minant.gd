@@ -139,3 +139,8 @@ func _on_l_timer_timeout():
 	_update()
 	$LTimer.stop()
 	mining = true
+
+
+func _on_inv_pressed():
+	GlobalVariables.previous_sceen = "res://minant.tscn"
+	get_tree().change_scene_to_file("res://Inv.tscn")

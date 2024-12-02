@@ -212,3 +212,8 @@ func _on_fu_venta_pressed():
 
 func _on_check_box_toggled(toggled_on):
 	com = toggled_on
+
+
+func _on_inv_pressed():
+	GlobalVariables.previous_sceen = "res://Mercat/Materials.tscn"
+	get_tree().change_scene_to_file("res://Inv.tscn")

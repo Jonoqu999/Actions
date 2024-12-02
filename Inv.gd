@@ -44,7 +44,7 @@ func _on_inv_show():
 
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://node_2d.tscn")
+	get_tree().change_scene_to_file(GlobalVariables.previous_sceen)
 
 
 func _on_eines_pressed():

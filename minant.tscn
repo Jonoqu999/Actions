@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1rek1s67swto"]
+[gd_scene load_steps=13 format=3 uid="uid://c1rek1s67swto"]
 
 [ext_resource type="Script" path="res://minant.gd" id="1_h82uf"]
 [ext_resource type="Texture2D" uid="uid://dk6py6mgps8dv" path="res://Textures/Main-Background.png" id="2_4khw6"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://d2eivbg16gwub" path="res://Textures/Roca_1_5.png" id="8_p3q2d"]
 [ext_resource type="Texture2D" uid="uid://b7kjhscndbdbs" path="res://Textures/Roca_vida_bc.png" id="8_twko7"]
 [ext_resource type="Texture2D" uid="uid://bilprslgc3x5y" path="res://Textures/Roca_vida.png" id="9_v1hfu"]
+[ext_resource type="Texture2D" uid="uid://xtfofat07xhf" path="res://Textures/Inv.png" id="10_fyg8f"]
+[ext_resource type="Texture2D" uid="uid://fsqp13ju6xg7" path="res://Textures/Inv_Hover.png" id="11_ol6sp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nq6hh"]
 animations = [{
@@ -131,9 +133,26 @@ texture_progress = ExtResource("9_v1hfu")
 radial_initial_angle = 134.5
 radial_fill_degrees = 0.0
 
+[node name="Inv" type="TextureButton" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.94
+anchor_top = 0.11
+anchor_right = 0.94
+anchor_bottom = 0.11
+offset_left = -43.8801
+offset_top = -44.28
+offset_right = 44.1199
+offset_bottom = 43.72
+texture_normal = ExtResource("10_fyg8f")
+texture_hover = ExtResource("11_ol6sp")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="NTimer" to="." method="_on_n_timer_timeout"]
 [connection signal="timeout" from="LTimer" to="." method="_on_l_timer_timeout"]
+[connection signal="pressed" from="Inv" to="." method="_on_inv_pressed"]

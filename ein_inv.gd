@@ -14,7 +14,7 @@ func _process(_delta):
 	$Accoins/Accoins.text = str(GlobalVariables.Accoins)
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file("res://Inv.tscn")
+	get_tree().change_scene_to_file(GlobalVariables.previous_sceen)
 
 func Ein_show():
 	Ein_hide()

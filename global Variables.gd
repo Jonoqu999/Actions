@@ -20,3 +20,5 @@ var passw = ""
 
 var rock_health = 10
 var loot_tabel = []
+
+var previous_sceen = "res://node_2d.tscn"

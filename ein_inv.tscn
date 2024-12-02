@@ -51,17 +51,6 @@ auto_translate = false
 theme_override_font_sizes/font_size = 60
 text = "Sortida"
 
-[node name="Ein" type="Button" parent="Exit"]
-layout_mode = 0
-offset_left = 229.0
-offset_top = -1.0
-offset_right = 389.0
-offset_bottom = 90.0
-size_flags_horizontal = 6
-auto_translate = false
-theme_override_font_sizes/font_size = 60
-text = "Inventari"
-
 [node name="Accoins" type="CanvasGroup" parent="."]
 
 [node name="Coins" type="Sprite2D" parent="Accoins"]
@@ -84,5 +73,15 @@ text = "99999999999999999999999999999"
 horizontal_alignment = 2
 vertical_alignment = 1
 
+[node name="Ein" type="Button" parent="."]
+offset_left = 257.0
+offset_top = 26.0
+offset_right = 528.0
+offset_bottom = 117.0
+size_flags_horizontal = 6
+auto_translate = false
+theme_override_font_sizes/font_size = 60
+text = "Inventari"
+
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Exit/Ein" to="." method="_on_ein_pressed"]
+[connection signal="pressed" from="Ein" to="." method="_on_ein_pressed"]

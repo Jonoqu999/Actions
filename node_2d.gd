@@ -33,6 +33,7 @@ func _on_mina_pressed():
 
 
 func _on_inventari_pressed():
+	GlobalVariables.previous_sceen = "res://node_2d.tscn"
 	get_tree().change_scene_to_file("res://Inv.tscn")
 
 

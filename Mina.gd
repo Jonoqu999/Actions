@@ -47,3 +47,8 @@ func _on_t_3_pressed():
 	GlobalVariables.rock_health = 30
 	
 	get_tree().change_scene_to_file("res://minant.tscn")
+
+
+func _on_inv_pressed():
+	GlobalVariables.previous_sceen = "res://mina.tscn"
+	get_tree().change_scene_to_file("res://Inv.tscn")
