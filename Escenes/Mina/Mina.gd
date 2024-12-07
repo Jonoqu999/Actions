@@ -1,7 +1,7 @@
 extends Node
 var ob_t1 = [{ore = "pedra",Pro = 80},{ore = "ferro",Pro = 14},{ore = "or",Pro = 7}]
-var ob_t2 = [{ore = "pedra",Pro = 70},{ore = "ferro",Pro = 15},{ore = "or",Pro = 10},{ore = "maragda",Pro = 6}]
-var ob_t3 = [{ore = "pedra",Pro = 60},{ore = "ferro",Pro = 20},{ore = "or",Pro = 14},{ore = "maragda",Pro = 3},{ore = "diamant",Pro = 3}]
+var ob_t2 = [{ore = "pedra",Pro = 55},{ore = "ferro",Pro = 18},{ore = "or",Pro = 13},{ore = "maragda",Pro = 10}]
+var ob_t3 = [{ore = "pedra",Pro = 37},{ore = "ferro",Pro = 26},{ore = "or",Pro = 18},{ore = "maragda",Pro = 13},{ore = "diamant",Pro = 7}]
 var mina = true
 
 # Called when the node enters the scene tree for the first time.

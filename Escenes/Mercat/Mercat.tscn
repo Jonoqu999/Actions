@@ -33,12 +33,12 @@ theme_override_font_sizes/font_size = 30
 text = "Construir casa"
 
 [node name="Exit" type="Button" parent="."]
+auto_translate_mode = 2
 offset_left = 37.0
 offset_top = 27.0
 offset_right = 192.0
 offset_bottom = 118.0
 size_flags_horizontal = 6
-auto_translate = false
 theme_override_font_sizes/font_size = 60
 text = "Sortida"
 

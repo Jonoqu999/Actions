@@ -5,13 +5,18 @@ signal invenari
 signal tenda
 signal config
 
+@onready var poble_hover: TextureRect = $Poble/Poble_Hover
+@onready  var bosc_hover: TextureRect = $Bosc/Bosc_Hover
+@onready var mine_hover: TextureRect = $Mine/Mine_Hover
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide.emit()
 	$Copnfig.hide()
-	$Mine_Hover.hide()
-	$Bosc_Hover.hide()
-	$Poble_Hover.hide()
+	mine_hover.hide()
+	bosc_hover.hide()
+	poble_hover.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -51,24 +56,24 @@ func _on_bosc_pressed():
 
 
 func _on_texture_button_mouse_entered():
-	$Mine_Hover.show()
+	mine_hover.show()
 
 
 func _on_texture_button_mouse_exited():
-	$Mine_Hover.hide()
+	mine_hover.hide()
 
 
 func _on_bosc_mouse_entered():
-	$Bosc_Hover.show()
+	bosc_hover.show()
 
 
 func _on_bosc_mouse_exited():
-	$Bosc_Hover.hide()
+	bosc_hover.hide()
 
 
 func _on_poble_mouse_entered():
-	$Poble_Hover.show()
+	poble_hover.show()
 
 
 func _on_poble_mouse_exited():
-	$Poble_Hover.hide()
+	poble_hover.hide()

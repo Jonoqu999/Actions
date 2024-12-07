@@ -32,7 +32,7 @@ func _get_price(t,v):
 	return val
 
 func _on_exit_pressed():
-	get_tree().change_scene_to_file(GlobalVariables.previous_sceen)
+	get_tree().change_scene_to_file("res://Escenes/Mercat/Mercat.tscn")
 
 
 func _on_mat_pressed():

@@ -6,7 +6,7 @@ var rock_health = MAX_ROCK_HEALTH
 var mina = true
 var mining = false
 
-@onready var rock = $AnimatedSprite2D 
+@onready var rock: AnimatedSprite2D = $TextureButton/AnimatedSprite2D
 @onready var bar = $ProgressBar
 
 # Called when the node enters the scene tree for the first time.
@@ -119,7 +119,7 @@ func _on_exit_pressed():
 func _aplicar_mults(value):
 	value *= max(1,1.1*GlobalVariables.cases)
 	value *= max(1,1.5*(GlobalVariables.pic_lvl-1))
-	return value
+	return int(value)
 
 
 func _on_cooldown_timeout():

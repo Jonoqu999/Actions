@@ -60,6 +60,7 @@ func _on_r_ein_pressed():
 
 func _on_en_pressed():
 	if _pot_permetre_casa():
+		print("NOVA CASA")
 		GlobalVariables.cases += 1
 		$Cases.text = "Cases: "+ str(GlobalVariables.cases)
 		$Timer.start()
@@ -70,7 +71,7 @@ func _pot_permetre_casa() -> bool:
 		print("Pedra ", GlobalVariables.pedra[0] >= preu_casa.Pedra*_modificador_cases())
 		print("Ferro ", GlobalVariables.ferro[0] >= preu_casa.Ferro*_modificador_cases())
 		print("Fusta ", GlobalVariables.fusta[0] >= preu_casa.Fusta*_modificador_cases())
-		if GlobalVariables.pedra[0] >= preu_casa.Pedra*_modificador_cases() and GlobalVariables.ferro[0] >= preu_casa.Pedra*_modificador_cases() and GlobalVariables.fusta[0] >= preu_casa.Fusta*_modificador_cases():
+		if (GlobalVariables.pedra[0] >= preu_casa.Pedra*_modificador_cases()) and (GlobalVariables.ferro[0] >= preu_casa.Ferro*_modificador_cases()) and (GlobalVariables.fusta[0] >= preu_casa.Fusta*_modificador_cases()):
 			GlobalVariables.pedra[0] -= preu_casa.Pedra*_modificador_cases()
 			GlobalVariables.ferro[0] -= preu_casa.Ferro*_modificador_cases()
 			GlobalVariables.fusta[0] -= preu_casa.Fusta*_modificador_cases()
@@ -81,7 +82,7 @@ func _pot_permetre_casa() -> bool:
 		return false
 
 func _modificador_cases() -> int:
-	return int(max(1,1.2*GlobalVariables.cases-1))
+	return int(max(1,1.2*GlobalVariables.cases))
 
 
 func _on_timer_timeout():
